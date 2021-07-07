@@ -1,0 +1,21 @@
+{% extends "project-page-base.html" %}
+{% block title %}
+Interactive
+{% endblock %}
+{% block page_title %}
+Plotly Visualisation Interactive
+{% endblock %}
+{% block page_subtitle_text %}
+Quickly and easily get started with Bootstrap's compiled, production-ready files with this barebones example featuring some basic HTML and helpful links. Download all our examples to get started.
+{% endblock%}
+{% block content %}
+
+
+
+
+  <div id="chart" class="chart"></div>
+  <script>
+      d = {{ graphJSON | safe }};
+      Plotly.newPlot('chart', d, {});
+  </script>
+{% endblock %}

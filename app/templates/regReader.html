@@ -1,0 +1,8 @@
+{% if users %}
+    {% for u in users %}
+
+        <p>{{ u.name }}</p>
+        <p>{{ u.email }}</p>
+
+    {% endfor %}
+{% endif %}

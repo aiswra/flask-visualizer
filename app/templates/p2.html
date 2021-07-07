@@ -1,0 +1,35 @@
+{% extends "project-page-base.html" %}
+{% block title %}
+Interactive
+{% endblock %}
+{% block page_title %}
+Plotly Visualisation Interactive
+{% endblock %}
+{% block page_subtitle_text %}
+Quickly and easily get started with Bootstrap's compiled, production-ready files with this barebones example featuring some basic HTML and helpful links. Download all our examples to get started.
+{% endblock%}
+{% block content %}
+  <script>
+        function cb(selection) {
+            $.getJSON({
+                url: "/callback", data: { 'data': selection }, success: function(result) {
+                    Plotly.newPlot('chart', result, {});;
+                }
+            });
+        }
+    </script>
+
+
+    <div class = "col justify-content-start">
+      <p>Type  your group</p>
+      <input type="text" id="fname" name="fname" onchange="cb(this.value)">
+      <div id="chart" class="chart"></div>
+    </div>
+
+
+
+    <script>
+        d = {{ graphJSON | safe }};
+        Plotly.newPlot('chart', d, {});
+    </script>
+{% endblock %}

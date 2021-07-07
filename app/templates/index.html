@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block page_title %} Welcome! {% endblock %}
+{% block page_subtitle %} Quickly and easily get started with Bootstrap's compiled, production-ready files with this barebones example featuring some basic HTML and helpful links. Download all our examples to get started.{% endblock %}
+{% block content %}
+
+    <div class="col justify-content-start  p-5 ">
+      <h2>Project</h2>
+      <p>Ready to beyond the starter template? Check out these open source projects that you can quickly duplicate to a new GitHub repository.</p>
+      <ul class="icon-list">
+        <li><a href="project/data-visualisation" rel="noopener" target="_blank">Plotly Data Visualisation</a></li>
+        <li><a href="project/interactive-data-visualisation" rel="noopener" target="_blank">Plotly + SQLAlchemy Data Visualisation</a></li>
+        <li><a href="project/crud-data-visualisation" rel="noopener" target="_blank">Plotly + SQLAlchemy + WTForm Data Visualisation</a></li>
+        <li><a href="project/linear-regression" rel="noopener" target="_blank">Linear Regression Predictor</a></li>
+      </ul>
+    </div>
+    <div class="col justify-content-end p-5  ">
+      <h2>Blog</h2>
+      <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
+      <ul class="icon-list">
+        <li><a href="/docs/5.0/getting-started/introduction/">Bootstrap quick start guide</a></li>
+        <li><a href="/docs/5.0/getting-started/webpack/">Bootstrap Webpack guide</a></li>
+        <li><a href="/docs/5.0/getting-started/parcel/">Bootstrap Parcel guide</a></li>
+        <li><a href="/docs/5.0/getting-started/build-tools/">Contributing to Bootstrap</a></li>
+      </ul>
+    </div>
+
+{% endblock %}
